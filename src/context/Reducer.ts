@@ -1,6 +1,7 @@
-import { Section, State } from '../Interfaces/Interfaces';
+import { Section, State, UserData } from '../Interfaces/Interfaces';
 
 type ReducerActions =
+    | { type: 'ADD_USER_DATA', payload: UserData }
     | { type: 'ADD_INTEREST', payload: number }
     | { type: 'ADD_INTEREST_SECTION', payload: Section[] }
     | { type: 'RESET_INTEREST_SECTION', payload: Section[] }
@@ -9,6 +10,8 @@ type ReducerActions =
 
 export const InterestsReducer = (state: State, action: ReducerActions): State => {
     switch (action.type) {
+        case "ADD_USER_DATA":
+            return { ...state, userData: { ...state.userData, ...action.payload } }
         case "ADD_INTEREST":
             return { ...state, interests: [...state.interests, action.payload] }
         case "ADD_INTEREST_SECTION":

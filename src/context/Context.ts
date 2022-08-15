@@ -1,8 +1,9 @@
 import { createContext } from "react";
-import { State } from "../Interfaces/Interfaces";
+import { State, UserData } from "../Interfaces/Interfaces";
 
 export type ContextProps = {
     State: State;
+    addUserData: (userData: UserData) => void;
     addInterest: (interest: number) => void;
     addSection: (Section: any) => void;
     resetSection: () => void;
