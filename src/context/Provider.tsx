@@ -1,10 +1,17 @@
 import { useReducer } from 'react';
 
-import { State } from "../Interfaces/Interfaces"
+import { State, UserData } from "../Interfaces/Interfaces"
 import { Context } from "./Context"
 import { InterestsReducer } from './Reducer';
 
 export const initialState: State = {
+    userData: { 
+        age: 0,
+        course: '',
+        email: '',
+        name: '',
+        school: ''
+    },
     interests: [],
     Sections: [
         { section: '1', value: 0, isActived: false },
@@ -26,6 +33,10 @@ export const Provider = ({ children }: ProviderProps) => {
 
     const [State, dispatch] = useReducer(InterestsReducer, initialState);
 
+    const addUserData = (userData: UserData) => {
+        dispatch({ type: 'ADD_USER_DATA', payload: userData })
+    }
+
     const addInterest = (interest: number) => {
         dispatch({ type: 'ADD_INTEREST', payload: interest })
     }
@@ -44,7 +55,7 @@ export const Provider = ({ children }: ProviderProps) => {
     const setStep = (step: number) => {
         dispatch({ type: 'SET_STEP', payload: step })
     }
-    
+
     const setUrlVideo = (urlVideo: string) => {
         dispatch({ type: 'SET_URL_VIDEO', payload: urlVideo })
     }
@@ -52,6 +63,7 @@ export const Provider = ({ children }: ProviderProps) => {
     return (
         <Context.Provider value={{
             State,
+            addUserData,
             addInterest,
             addSection,
             resetSection,
