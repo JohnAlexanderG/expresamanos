@@ -1,8 +1,10 @@
 
 import type { DatePickerProps } from 'antd';
 import { Form, Input, DatePicker, Select, Button, Alert } from 'antd';
+import { ref } from 'firebase/storage';
 import { useContext, useState } from 'react';
 import { Context } from '../context/Context';
+import { getVideo, storageRoot } from '../utils/firebase';
 const { Item } = Form;
 const { Option } = Select;
 
@@ -10,7 +12,7 @@ const { Option } = Select;
 
 function FormDataUser() {
     const [showAlertError, setShowAlertError] = useState(false);
-    const { addUserData, setStep } = useContext(Context)
+    const { addUserData, setStep, setUrlVideo } = useContext(Context)
 
     /**
      * TODO:
@@ -26,6 +28,7 @@ function FormDataUser() {
     };
 
     const onFinish = (values: any) => {
+        const _storageRef = ref(storageRoot, 'videos/0002.mp4')
         const currentDate: number = new Date().getFullYear()
         const date: number = new Date(values.age._d).getFullYear();
         const age: number = currentDate - date;
@@ -35,12 +38,19 @@ function FormDataUser() {
         } else {
             setShowAlertError(false);
             addUserData({ ...values, age })
+            getVideo(_storageRef).then((_videoUrl) => {
+                setUrlVideo(_videoUrl);
+            });
             setStep(1);
         }
     };
 
     return (
-        <Form name="control-hooks" onFinish={onFinish}>
+        <Form
+            name="control-hooks"
+            onFinish={onFinish}
+            layout="vertical"
+        >
             <Item
                 label="Nombre"
                 name="name"

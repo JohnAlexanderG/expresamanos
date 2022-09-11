@@ -1,16 +1,18 @@
 import { useContext } from "react";
-import { Context } from "../context/Context";
-import { data } from "../utils/data";
-import ButtonContinue from "./ButtonContinue";
-import SelectedSections from "./SelectedSections";
-import FormDataUser from './FormDataUser';
+import { Context } from "../../context/Context";
+import { data } from "../../utils/data";
+import ButtonContinue from "../ButtonContinue";
+import SelectedSections from "../SelectedSections";
+import FormDataUser from '../FormDataUser';
+
+import './styles.css';
 
 export default function Content() {
     const { State } = useContext(Context)
     const { step } = State;
 
     return (
-        <>
+        <div className="content-wrapper">
             {data.map((_step) => {
                 if (_step.step === step) {
                     return (
@@ -31,6 +33,6 @@ export default function Content() {
                     )
                 }
             })}
-        </>
+        </div>
     )
 }
