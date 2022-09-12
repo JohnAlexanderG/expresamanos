@@ -27,7 +27,7 @@ export default function Content() {
                             }}>
                             <h1>{_step.text_title}</h1>
                             <p>{_step.description}</p>
-                            {(step === 2) && (
+                            {(step === 2 || step === 28) && (
                                 <ul>
                                     {_step.list_options_text.map((item, idx) => <li key={idx} >{item}</li>)}
                                 </ul>
