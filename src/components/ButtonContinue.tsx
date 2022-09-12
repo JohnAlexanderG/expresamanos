@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { ref } from 'firebase/storage';
 import { Context } from "../context/Context";
-import { getVideo, storageRoot } from "../utils/firebase";
+import { addUsers, getVideo, storageRoot } from "../utils/firebase";
 import { Button } from "antd";
 
 export default function ButtonContinue() {
+
     const {
         State,
         addInterest,
@@ -18,18 +19,25 @@ export default function ButtonContinue() {
     } = State;
 
     const onHandleClick = () => {
-        const _stepReset = step + 1
+
+        // addUsers({
+        //     codigo: 1,
+        //     colegio: "paulo freire",
+        //     curso: 11,
+        //     edad: 17,
+        //     nombre: "john doe"
+        // });
+
+        const _stepReset = step === 1 ? 2 : step + 1
 
         let _video = '';
-        if (_stepReset <= 8) {
-            if (_stepReset === 0) {
-                _video = 'videos/0001.mp4'
-            } else {
-                _video = `videos/000${_stepReset + 1}.mp4`
-            }
+        if (_stepReset < 8) {
+            _video = `videos/000${_stepReset + 1}.mp4`
         } else {
             _video = `videos/00${_stepReset + 1}.mp4`
         }
+
+        console.log('_video', _video);
 
         const _storageRef = ref(storageRoot, _video)
 

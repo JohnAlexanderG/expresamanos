@@ -8,7 +8,7 @@ export default function Video() {
     const { videoUrl } = State;
 
     return (
-        <div style={{ width: '450px' }}>
+        <div style={{ width: '500px', maxWidth: '500px' }}>
             <Player autoPlay muted src={videoUrl} />
         </div>
     )
