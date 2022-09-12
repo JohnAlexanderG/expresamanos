@@ -21,13 +21,19 @@ export default function Content() {
                             style={{
                                 display: 'flex',
                                 flexDirection: 'column',
-                                alignItems: 'center',
+                                alignItems: 'flex-start',
                                 justifyContent: 'center',
                                 marginTop: '2rem'
                             }}>
                             <h1>{_step.text_title}</h1>
+                            <p>{_step.description}</p>
+                            {(step === 2) && (
+                                <ul>
+                                    {_step.list_options_text.map((item, idx) => <li key={idx} >{item}</li>)}
+                                </ul>
+                            )}
                             {(step === 0) && <FormDataUser />}
-                            {(step >= 3 && step <= 13) && <SelectedSections />}
+                            {(step >= 3 && step <= 13) && <SelectedSections options={_step.list_options_text} />}
                             {(step !== 0) && <ButtonContinue />}
                         </div>
                     )
