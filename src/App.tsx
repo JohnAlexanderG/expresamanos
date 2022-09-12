@@ -7,7 +7,7 @@ import Content from './components/Content';
 
 import "antd/dist/antd.css";
 import { useEffect } from 'react';
-import { addUsers, getUsers } from './utils/firebase';
+// import { addUsers, getUsers } from './utils/firebase';
 
 import './App.css';
 

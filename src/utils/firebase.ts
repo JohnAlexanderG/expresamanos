@@ -1,5 +1,11 @@
 import { initializeApp } from 'firebase/app'
 import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs
+} from 'firebase/firestore'
+import {
     getStorage,
     ref,
     getDownloadURL
@@ -15,6 +21,7 @@ const firebaseApp = initializeApp({
     appId: "1:865883131105:web:93ba570dec0127e01f7ba0"
 });
 
+const db = getFirestore(firebaseApp);
 const storage = getStorage(firebaseApp);
 
 export const storageRoot = ref(storage);
@@ -27,4 +34,14 @@ export const getVideo = (_storageRoot: any) => getDownloadURL(_storageRoot)
         throw new Error(_err);
     });
 
+export const addUsers = async (payload: object) => {
+    const docRef = await addDoc(collection(db, 'usuarios'), payload);
+    console.log('addUsers.docRef.id:', docRef.id);
+}
 
+export const getUsers = async () => {
+    const querySnapshot = await getDocs(collection(db, "usuarios"));
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, doc.data());
+    });
+} 
