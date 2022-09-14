@@ -22,6 +22,15 @@ export default function StepView() {
                     if (step >= 20 && (_step.step >= 20 && _step.step <= 29)) {
                         return <Step style={{ display: step >= 30 ? 'none' : 'block' }} key={`option-${_step}`} title={_step.text_title} />
                     }
+                    if (step >= 30 && (_step.step >= 30 && _step.step <= 39)) {
+                        return <Step style={{ display: step >= 40 ? 'none' : 'block' }} key={`option-${_step}`} title={_step.text_title} />
+                    }
+                    if (step >= 40 && (_step.step >= 40 && _step.step <= 49)) {
+                        return <Step style={{ display: step >= 50 ? 'none' : 'block' }} key={`option-${_step}`} title={_step.text_title} />
+                    }
+                    if (step >= 50 && (_step.step >= 50 && _step.step <= 59)) {
+                        return <Step style={{ display: step >= 60 ? 'none' : 'block' }} key={`option-${_step}`} title={_step.text_title} />
+                    }
                 })}
             </Steps>
         </div>

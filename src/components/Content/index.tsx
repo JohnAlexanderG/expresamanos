@@ -9,7 +9,7 @@ import './styles.css';
 
 export default function Content() {
     const { State } = useContext(Context)
-    const { step } = State;
+    const { step, Sections, SkillsSections } = State;
 
     return (
         <div className="content-wrapper">
@@ -33,7 +33,8 @@ export default function Content() {
                                 </ul>
                             )}
                             {(step === 0) && <FormDataUser />}
-                            {(step >= 3 && step <= 13) && <SelectedSections options={_step.list_options_text} />}
+                            {(step >= 3 && step <= 13) && <SelectedSections list={Sections} options={_step.list_options_text} />}
+                            {(step >= 29 && step <= 39) && <SelectedSections list={SkillsSections} options={_step.list_options_text} />}
                             {(step !== 0) && <ButtonContinue />}
                         </div>
                     )

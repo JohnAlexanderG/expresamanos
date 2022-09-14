@@ -20,7 +20,7 @@ function FormDataUser() {
      * cuando esté en el rango de edad permitida.
      * */
     const onHandleChange: DatePickerProps['onChange'] = (date, dateString) => {
-        console.log(date, dateString);
+        // console.log(date, dateString);
     };
 
     const onClose = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {

@@ -16,6 +16,8 @@ export interface State {
     userData: UserData;
     interests: number[];
     Sections: Section[];
+    skills: number[];
+    SkillsSections: Section[];
     step: number;
     videoUrl: string;
 }
