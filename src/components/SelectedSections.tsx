@@ -1,19 +1,14 @@
-import { useContext } from 'react';
-import { Context } from "../context/Context";
 import Selected from "./Selected";
 
-export default function SelectedSections({ options }) {
-  const { State } = useContext(Context)
-  const { Sections } = State;
-
+export default function SelectedSections({ list, options }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '500px' }}>
-      {Sections.map((interest, index) => {
+      {list.map((item, index) => {
         return (
-          <>
+          <div key={item.section}>
             <span>{options[index]}</span>
-            <Selected key={interest.section} section={interest.section} value={interest.value} />
-          </>
+            <Selected section={item.section} value={item.value} />
+          </div>
         );
       })}
     </div>

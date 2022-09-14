@@ -5,6 +5,9 @@ type ReducerActions =
     | { type: 'ADD_INTEREST', payload: number }
     | { type: 'ADD_INTEREST_SECTION', payload: Section[] }
     | { type: 'RESET_INTEREST_SECTION', payload: Section[] }
+    | { type: 'ADD_SKILLS', payload: number }
+    | { type: 'ADD_SKILLS_SECTION', payload: Section[] }
+    | { type: 'RESET_SKILLS_SECTION', payload: Section[] }
     | { type: 'SET_STEP', payload: number }
     | { type: 'SET_URL_VIDEO', payload: string }
 
@@ -18,6 +21,12 @@ export const InterestsReducer = (state: State, action: ReducerActions): State =>
             return { ...state, Sections: action.payload }
         case "RESET_INTEREST_SECTION":
             return { ...state, Sections: action.payload }
+        case "ADD_SKILLS":
+            return { ...state, skills: [...state.skills, action.payload] }
+        case "ADD_SKILLS_SECTION":
+            return { ...state, SkillsSections: action.payload }
+        case "RESET_SKILLS_SECTION":
+            return { ...state, SkillsSections: action.payload }
         case "SET_STEP":
             return { ...state, step: action.payload }
         case "SET_URL_VIDEO":

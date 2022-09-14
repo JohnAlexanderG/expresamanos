@@ -9,12 +9,15 @@ export default function ButtonContinue() {
     const {
         State,
         addInterest,
+        addSkills,
         resetSection,
+        resetSectionSkills,
         setStep,
         setUrlVideo
     } = useContext(Context)
     const {
         Sections,
+        SkillsSections,
         step
     } = State;
 
@@ -37,7 +40,7 @@ export default function ButtonContinue() {
             _video = `videos/00${_stepReset + 1}.mp4`
         }
 
-        console.log('_video', _video);
+        // console.log('_video', _video);
 
         const _storageRef = ref(storageRoot, _video)
 
@@ -47,16 +50,30 @@ export default function ButtonContinue() {
                 if (interest.isActived === true) countOption = countOption + 1;
                 return interest.value
             }).reduce((previousValue, currentValue) => previousValue + currentValue);
-
             if (countOption >= Sections.length) {
                 setStep(step + 1);
                 addInterest(totalAmount);
                 resetSection();
                 getVideo(_storageRef).then((_videoUrl) => {
                     setUrlVideo(_videoUrl);
-                })
+                });
             }
-        } else {
+        } else if (step >= 29 && step <= 39) {
+            let countOption = 0;
+            const totalAmountSkill = SkillsSections.map((interest) => {
+                if (interest.isActived === true) countOption = countOption + 1;
+                return interest.value
+            }).reduce((previousValue, currentValue) => previousValue + currentValue);
+            if (countOption >= SkillsSections.length) {
+                setStep(step + 1);
+                addSkills(totalAmountSkill);
+                resetSectionSkills();
+                getVideo(_storageRef).then((_videoUrl) => {
+                    setUrlVideo(_videoUrl);
+                });
+            }
+        }
+        else {
             setStep(step + 1);
             getVideo(_storageRef).then((_videoUrl) => {
                 setUrlVideo(_videoUrl);
