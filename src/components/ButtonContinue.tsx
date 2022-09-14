@@ -34,7 +34,7 @@ export default function ButtonContinue() {
         const _stepReset = step === 1 ? 2 : step + 1
 
         let _video = '';
-        if (_stepReset < 8) {
+        if (_stepReset <= 8) {
             _video = `videos/000${_stepReset + 1}.mp4`
         } else {
             _video = `videos/00${_stepReset + 1}.mp4`
