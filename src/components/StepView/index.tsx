@@ -31,6 +31,9 @@ export default function StepView() {
                     if (step >= 50 && (_step.step >= 50 && _step.step <= 59)) {
                         return <Step style={{ display: step >= 60 ? 'none' : 'block' }} key={`option-${_step}`} title={_step.text_title} />
                     }
+                    if (step >= 60 && (_step.step >= 60 && _step.step <= 69)) {
+                        return <Step style={{ display: step >= 70 ? 'none' : 'block' }} key={`option-${_step}`} title={_step.text_title} />
+                    }
                 })}
             </Steps>
         </div>

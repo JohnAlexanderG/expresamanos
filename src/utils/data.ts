@@ -505,4 +505,151 @@ export const data = [
     description: 'Este instrumento le ayudara a identificar las áreas fuertes de su inteligencia. Lea cada una de las afirmaciones siguientes. Sí expresan una característica personal suya y le parece que, en general, la afirmación es veraz, entonces marque con una x la categoría que considere pertinente al criterio asignada asignado.',
     list_options_text: []
   },
+  {
+    step: 54,
+    text_title: 'Preguntas 01 - 10',
+    description: '',
+    list_options_text: [
+      '1. Prefiero hacer un mapa que explicarle a alguien como tiene que llegar.',
+      '2. Sí estoy enojado (a) o contento (a) generalmente sé exactamente porqué.',
+      '3. Se tocar (o antes sabía tocar) un instrumento musical.',
+      '4. Asoció las películas que veo con mi estado de ánimo.',
+      '5. Puedo sumar o multiplicar mentalmente con mucha rapidez.',
+      '6. Puedo ayudar a un amigo a manejar sus sentimientos porque yo lo pude hacer antes en relación a sentimientos parecidos.',
+      '7. Me gusta trabajar con calculadoras y computadores.',
+      '8. Aprendo rápido a bailar un baile nuevo.',
+      '9. No me es fácil expresar lo que pienso en el curso de una discusión o debate.',
+      '10. Disfruto de una buena charla discurso o sermón.',
+    ]
+  },
+  {
+    step: 55,
+    text_title: 'Preguntas 11 - 20',
+    description: '',
+    list_options_text: [
+      '11. Siempre distinto el norte del sur, esté donde esté.',
+      '12. Me gusta reunir grupos de personas en una fiesta o en un evento especial.',
+      '13. La vida me parece vacía sin baile.',
+      '14. Siempre entiendo los gráficos que vienen en las instrucciones de equipos o instrumentos.',
+      '15. Me gusta hacer rompecabezas y entretenerme con juegos electrónicos.',
+      '16. Me fue fácil entender andar en bicicleta o patines.',
+      '17. Me enojo cuando veo una discusión o una afirmación que me parece ilógica.',
+      '18. Soy capaz de convencer a otros que sigan mis planes.',
+      '19. Tengo buen sentido de equilibrio y coordinación.',
+      '20. Con frecuencia veo configuraciones y relaciones entre números con más rapidez y facilidad qué otros.',
+    ]
+  },
+  {
+    step: 56,
+    text_title: 'Preguntas 21 - 30',
+    description: '',
+    list_options_text: [
+      '21. Me gusta construir modelos o hacer esculturas.',
+      '22. Tengo agudeza en encontrar el significado de las palabras.',
+      '23. Puedo mirar un objeto de una manera y con la misma facilidad verlo de otra manera.',
+      '24. Con frecuencia hago conexión entre una película y algún evento de mi vida.',
+      '25. Me gusta trabajar con números y figuras.',
+      '26. Me gusta sentarme silenciosamente y reflexionar sobre mis sentimientos íntimos.',
+      '27. Con solo mirar la forma de instrucciones y estructuras me siento agusto.',
+      '28. Me gusta bailar cuando estoy a solas.',
+      '29. Soy bueno (a) para el atletismo.',
+      '30. Me gusta escribir cartas detalladas a mis amigos.',
+    ]
+  },
+  {
+    step: 57,
+    text_title: 'Preguntas 31 - 40',
+    description: '',
+    list_options_text: [
+      '31. Generalmente me doy cuenta de la expresión que tengo en la cara.',
+      '32. Me doy cuenta de las expresiones en la cara de otras personas.',
+      '33. Me mantengo "en contacto" con mis estados de ánimo. No me cuesta identificarlos.',
+      '34. Me doy cuenta de los estados de ánimo de otros.',
+      '35. Me doy cuenta bastante bien de lo que otros piensan de mí.',
+      '36. Disfruto de la clasificación de la flora la fauna y los fenómenos naturales.',
+      '37. Me gusta coleccionar plantas insectos y rocas.',
+      '38. Soy bueno descubriendo patrones en la naturaleza.',
+      '39. Tengo conciencia de la necesidad de la protección ambiental.',
+      '40. Mis materias de estudio preferidas son relacionadas a las ciencias naturales o sociales.',
+
+    ]
+  },
+  {
+    step: 58,
+    text_title: 'Interpretación de Resultados',
+    description: 'En la tabla de más abajo marca los números que correspondan a las oraciones que seleccionaste por ejemplo si elegiste la oración número 4 marca en la tabla el número 4 en la columna que dice "criterios de selección" y así con cada oración seleccionada, luego cuenta por cada inteligencia el total de números marcados. Ese número total indica qué tan desarrollada tienes esa inteligencia. Si tienes un total de 4 a 5 significa que esa inteligencia es dominante en ti.',
+    list_options_text: []
+  },
+  {
+    step: 59,
+    text_title: 'Inteligencia Lógico-matemática',
+    description: '',
+    list_options_text: [
+      'Definición: Capacidad para usar los números de manera efectiva y de razonar adecuadamente. Incluye la sensibilidad en los esquemas y relaciones lógicas como las afirmaciones y las proposiciones, las funciones y otras abstracciones relacionadas. Se reconoce con el modo de pensamiento del hemisferio lógico y con lo que nuestra  cultura ha considerado siempre como la única inteligencia.',
+      'Actividades asociadas: Alto nivel de inteligencia se ve en científicos, matemáticos, contadores, ingenieros y analistas de sistema, entre otros. Los niños que la han desarrollado analizan con facilidad planteamientos y problemas. Se acercan a los cálculos numéricos, estadísticas y presupuestos con entusiasmo. La utilizamos para resolver problemas de lógica y matemáticas. Es la inteligencia que tienen los científicos.',
+    ]
+  },
+  {
+    step: 60,
+    text_title: 'Inteligencia Lingüístico-verbal',
+    description: '',
+    list_options_text: [
+      'Definición: Capacidad de usar las palabras de manera efectiva, en forma oral o escrita. Incluye la habilidad del uso de la sintaxis, la fonética, la semántica y el uso de los pragmáticos del lenguaje ( La retórica, la mnemónica, la explicación y el metalenguaje). Utiliza ambos hemisferios.',
+      'Actividades asociadas: Alto nivel de esta inteligencia se ve en escritores, poetas, periodistas y oradores, entre otros. Está en los niños a los que se les encanta redactar historias, leer, jugar con rimas, trabalenguas y en los que aprenden con facilidad otros idiomas. La tienen los escritores, los poetas, los buenos redactores.',
+    ]
+  },
+  {
+    step: 61,
+    text_title: 'Inteligencia Corporal-kinestésica',
+    description: '',
+    list_options_text: [
+      'Definición: Capacidad para usar todo el cuerpo en la expresión de ideas y sentimientos, y la felicidad en el uso de las manos para transformar elementos. Incluye habilidades de coordinación, destreza, equilibrio, flexibilidad, fuerza y velocidad, cómo así también la capacidad cinestésica y la percepción de medidas y volúmenes. Capacidad de utilizar el propio cuerpo para realizar actividades o resolver problemas.',
+      'Actividades asociadas: Se manifiesta en atletas, bailarines, cirujanos y artesanos, entre otros puntos se aprecia en los niños que se destacan en actividades deportivas, danza, expresión corporal y / o en trabajos de construcción utilizando diversos materiales concretos. También en aquellos que son hábiles en la ejecución de instrumentos. Es la inteligencia de los deportistas, los artesanos los cirujanos y los bailarines. ',
+    ]
+  },
+  {
+    step: 62,
+    text_title: 'Inteligencia Espacial',
+    description: '',
+    list_options_text: [
+      'Definición: Capacidad de pensar en tres dimensiones. Permite percibir imágenes externas e internas, recrearlas, transformarlas o modificarlas, recorrer el espacio o hacer que los objetos los recorran y producir o decodificar información gráfica. Consiste en tomar un modelo mental del mundo en tres dimensiones.',
+      'Actividades asociadas: Presente en pilotos, marinos, escultores, pintores y arquitectos, entre otros. Está en los niños que estudian mejor con gráficos, esquemas, cuadros. Les gusta hacer mapas conceptuales y mentales. Entienden muy bien planos y croquis. Es la inteligencia que tienen los marineros, los ingenieros, los cirujanos, los escultores, los arquitectos, o los decoradores.',
+    ]
+  },
+  {
+    step: 63,
+    text_title: 'Inteligencia Musical',
+    description: '',
+    list_options_text: [
+      'Definición: Capacidad de percibir, discriminar cómo transformar y expresar las formas musicales. Incluye la sensibilidad al ritmo, al tono y el timbre.',
+      'Actividades asociadas: Está presente en compositores, directores de orquesta, críticos musicales, músicos, luthiers y oyentes sensibles, entre otras. Los niños que se evidencian se sienten atraídos por los sonidos de la naturaleza y por todo tipo de melodías. Disfrutan siguiendo el compás con el pie, golpeando o sacudiendo algún objeto rítmicamente. Inteligencia musical es, naturalmente la de los cantantes, compositores, músicos, bailarines.',
+    ]
+  },
+  {
+    step: 64,
+    text_title: 'Inteligencia Interpersonal',
+    description: '',
+    list_options_text: [
+      'Definición: Capacidad de entender a los demás e interactuar eficazmente con ellos. Incluye la sensibilidad a las expresiones faciales, la voz, los gestos y posturas y la habilidad para responder. La inteligencia interpersonal está relacionada con nuestra capacidad de entender a los demás.',
+      'Actividades asociadas: Presente en actores, políticos, buenos vendedores y docentes exitosos, entre otros. La tienen los niños que disfrutan trabajando en grupo, qué son convincentes en sus negociaciones con pares y mayores, que entienden al compañero.',
+    ]
+  },
+  {
+    step: 65,
+    text_title: 'Inteligencia Intrapersonal',
+    description: '',
+    list_options_text: [
+      'Definición: Capacidad de construir una percepción precisa respecto a sí mismo y de organizar y dirigir su propia vida. Incluye la autodisciplina, la autocomprensión y el autoestima. La inteligencia intrapersonal está determinada por nuestra capacidad de entendernos a nosotros mismos.',
+      'Actividades asociadas: Se encuentra muy desarrollada en teólogos, filósofos y psicólogos, entre otros. La evidencia en los niños que son reflexivos, de razonamiento acertado y suelen ser consejeros de sus pares.',
+    ]
+  },
+  {
+    step: 66,
+    text_title: 'Inteligencia Naturalista',
+    description: '',
+    list_options_text: [
+      'Definición: Capacidad de distinguir, clasificar y utilizar elementos del medio ambiente, objetos, animales o plantas. Tanto en el ambiente urbano como en el rural. Incluye las habilidades de la observación, experimentación, reflexión y cuestionamiento de nuestro entorno.',
+      'Actividades asociadas: La poseen en alto nivel la gente de campo, botánicos, cazadores, ecologistas y paisajistas, entre otros. Se le da a los niños que aman los animales como las plantas, que reconocen y les gusta investigar características del mundo natural y del hecho por el hombre.',
+    ]
+  },
 ]

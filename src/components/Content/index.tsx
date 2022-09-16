@@ -11,6 +11,8 @@ export default function Content() {
     const { State } = useContext(Context)
     const { step, Sections, SkillsSections } = State;
 
+    console.log('data.length:', data.length);
+
     return (
         <div className="content-wrapper">
             {data.map((_step) => {
@@ -27,15 +29,15 @@ export default function Content() {
                             }}>
                             <h1>{_step.text_title}</h1>
                             <p>{_step.description}</p>
-                            {(step === 2 || step === 28) && (
+                            {(_step.list_options_text.length) ? (
                                 <ul>
                                     {_step.list_options_text.map((item, idx) => <li key={idx} >{item}</li>)}
                                 </ul>
-                            )}
+                            ) : null}
                             {(step === 0) && <FormDataUser />}
                             {(step >= 3 && step <= 13) && <SelectedSections list={Sections} options={_step.list_options_text} />}
                             {(step >= 29 && step <= 39) && <SelectedSections list={SkillsSections} options={_step.list_options_text} />}
-                            {(step !== 0) && <ButtonContinue />}
+                            {(step !== 0 || step !== 66) && <ButtonContinue />}
                         </div>
                     )
                 }
