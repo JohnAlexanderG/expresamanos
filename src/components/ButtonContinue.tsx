@@ -86,6 +86,7 @@ export default function ButtonContinue() {
             style={{ marginTop: '1.5rem' }}
             type="primary"
             onClick={onHandleClick}
+            disabled={step === 66}
         >
             Continuar
         </Button>
