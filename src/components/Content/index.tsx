@@ -37,7 +37,7 @@ export default function Content() {
                             {(step === 0) && <FormDataUser />}
                             {(step >= 3 && step <= 13) && <SelectedSections list={Sections} options={_step.list_options_text} />}
                             {(step >= 29 && step <= 39) && <SelectedSections list={SkillsSections} options={_step.list_options_text} />}
-                            {(step !== 0 || step !== 66) && <ButtonContinue />}
+                            {(step !== 0 && step !== 66) && <ButtonContinue />}
                         </div>
                     )
                 }
