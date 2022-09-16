@@ -29,7 +29,7 @@ export const initialState: State = {
         { section: '4', value: 0, isActived: false },
         { section: '5', value: 0, isActived: false }
     ],
-    step: 50,
+    step: 0,
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/expresamanos.appspot.com/o/videos%2F0001.mp4?alt=media&token=4374b295-9060-4718-8175-6f55d0aac9fd'
 }
 
